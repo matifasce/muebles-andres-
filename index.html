@@ -61,6 +61,19 @@
   gtag('event', 'conversion', {'send_to': 'AW-18149662435/popxCKeh36wcEOO9t85D'});
 </script>
 
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    var whatsappBtn = document.getElementById("boton-whatsapp");
+    if (whatsappBtn) {
+        whatsappBtn.addEventListener("click", function() {
+            // Dispara la conversión hacia Google Ads
+            gtag('event', 'conversion', {
+                'send_to': 'AW-18149662435/popxCKeh36wcEOO9t85D'
+            });
+        });
+    }
+});
+</script>
 
   
 </head>
