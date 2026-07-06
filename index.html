@@ -49,21 +49,30 @@
 
 <!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18149662435"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-18149662435'); </script>
 
-
-<!-- Event snippet for Contacto conversion page --> <script> gtag('event', 'conversion', {'send_to': 'AW-18149662435/YGgTCLX-ycocEOO9t85D'}); </script>
-
+<!-- Event snippet for Contacto (1) conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
 <script>
-document.addEventListener("DOMContentLoaded", function() {
-    var whatsappBtn = document.getElementById("boton-whatsapp");
-    if (whatsappBtn) {
-        whatsappBtn.addEventListener("click", function() {
-            // Dispara la conversión hacia Google Ads
-            gtag('event', 'conversion', {
-                'send_to': 'AW-18149662435/popxCKeh36wcEOO9t85D'
-            });
-        });
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
     }
-});
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18149662435/V0D8CMrI5sscEOO9t85D',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+
+
+  
+<!-- Event snippet for Contacto (1) conversion page -->
+<script>
+  gtag('event', 'conversion', {'send_to': 'AW-18149662435/V0D8CMrI5sscEOO9t85D'});
+</script>
+
 </script>
 
   
